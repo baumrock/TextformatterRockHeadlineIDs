@@ -1,7 +1,5 @@
 <?php namespace ProcessWire;
 
-use Symfony\Component\DomCrawler\Crawler;
-
 /**
  * @author Bernhard Baumrock, 26.01.2022
  * @license Licensed under MIT
@@ -14,7 +12,7 @@ class TextformatterRockHeadlineIDs extends Textformatter {
   public static function getModuleInfo() {
     return [
       'title' => 'RockHeadlineIDs',
-      'version' => '1.0.1',
+      'version' => '1.0.2',
       'summary' => 'Demo Textformatter',
     ];
   }
