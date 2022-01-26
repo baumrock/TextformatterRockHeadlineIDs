@@ -73,4 +73,4 @@ $wire->addHookAfter("TextformatterRockHeadlineIDs::getID", function($event) {
 
 You can use tracy to debug this formatter:
 
-![img](https://i.imgur.com/rxV4fJG.png)
+![img](https://i.imgur.com/WFnG7aJ.png)
