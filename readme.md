@@ -2,7 +2,7 @@
 
 Textformatter that applies id attributes to all headlines (h1-h6) in the markup field.
 
-```php
+```html
 // input
 <h1>This is my headline</h1>
 // output
@@ -13,7 +13,7 @@ Textformatter that applies id attributes to all headlines (h1-h6) in the markup 
 
 If an id already exists in the input it will leave this id as is:
 
-```php
+```html
 // input
 <h1 id='foo'>foo</h1>
 <h2>bar</h2>
@@ -26,7 +26,7 @@ If an id already exists in the input it will leave this id as is:
 
 It will automatically apply dashes until the id is unique:
 
-```php
+```html
 // input
 <h1>foo</h1>
 <h2>foo</h2>
@@ -41,7 +41,7 @@ It will automatically apply dashes until the id is unique:
 
 Special characters will be sanitized according to your transliterate settings:
 
-```php
+```html
 // input
 <h1>Sehr schön</h1>
 // output
@@ -54,7 +54,7 @@ Special characters will be sanitized according to your transliterate settings:
 
 You can customize the generated ID via hooking into `getID`:
 
-```php
+```html
 $wire->addHookAfter("TextformatterRockHeadlineIDs::getID", function($event) {
   $event->return .= "-hooked";
 });
