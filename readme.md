@@ -54,10 +54,17 @@ Special characters will be sanitized according to your transliterate settings:
 
 You can customize the generated ID via hooking into `getID`:
 
-```html
+```php
 $wire->addHookAfter("TextformatterRockHeadlineIDs::getID", function($event) {
   $event->return .= "-hooked";
 });
+```
+
+```html
+// input
+<h1>foo</h1>
+// output
+<h1 id='foo-hooked'>foo</h1>
 ```
 
 ---
